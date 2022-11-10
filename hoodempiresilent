@@ -7,7 +7,7 @@ hookmetamethod = hookmetamethod
 Drawing = Drawing
 
 local FOV_CIRCLE = Drawing.new("Circle")
-FOV_CIRCLE.Visible = true
+FOV_CIRCLE.Visible = false
 FOV_CIRCLE.Filled = false
 FOV_CIRCLE.Thickness = 0
 FOV_CIRCLE.Transparency = 1
@@ -82,46 +82,3 @@ oldIndex = hookmetamethod(game, "__index", function(self, Index)
     end
     return oldIndex(self, Index)
 end)
- if Settings.rewrittenmain.AUTOPRED == true then
-         pingvalue = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
-         split = string.split(pingvalue,'(')
-         ping = tonumber(split[1])
-         if ping < 200
-            _G.Prediction = .179
-         if ping < 190
-            _G.Prediction = .176
-         if ping < 180
-            _G.Prediction = .173
-         if ping < 170 then
-            _G.Prediction = .167
-         if ping < 160 then
-            _G.Prediction = .163
-         if ping < 150 then
-             _G.Prediction = .159
-         if ping < 150 then
-            _G.Prediction = .156
-         if ping < 140 then
-            _G.Prediction = .154
-        if ping < 130 then
-            _G.Prediction = .151
-        elseif ping < 125 then
-            _G.Prediction = .149
-        elseif ping < 110 then
-            _G.Prediction = .146
-        elseif ping < 105 then
-            _G.Prediction = .138
-        elseif ping < 90 then
-            _G.Prediction = .136
-        elseif ping < 80 then
-            _G.Prediction = .134
-        elseif ping < 70 then
-            _G.Prediction = .131
-        elseif ping < 60 then
-            _G.Prediction = .1229
-        elseif ping < 50 then
-            _G.Prediction = .1225
-        elseif ping < 40 then
-            _G.Prediction = .1256
-        end
-    end
-end)   
