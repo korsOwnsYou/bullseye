@@ -5,7 +5,6 @@ local Mouse = LocalPlayer:GetMouse()
 local Camera = game:GetService("Workspace").CurrentCamera
 hookmetamethod = hookmetamethod
 Drawing = Drawing
-
 local FOV_CIRCLE = Drawing.new("Circle")
 FOV_CIRCLE.Visible = true
 FOV_CIRCLE.Filled = false
